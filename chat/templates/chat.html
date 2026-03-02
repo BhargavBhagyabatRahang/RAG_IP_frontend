@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+     <head>
+
+          <title>AI Assistor</title>
+
+          <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+          <link rel="stylesheet" href="{% static 'css/chat_style.css' %}">
+          
+     </head>
+
+     <body>
+
+          <div class="container mt-5">
+
+               <h3 class="text-center mb-4">AI Assistor</h3>
+
+               <div id="chatBox" class="chat-box mb-3">
+
+               </div>
+
+               <div class="input-group">
+
+                    <input id="userInput" type="text" class="form-control" placeholder="Chat with AI assistor">
+                    <button class="btn btn-primary" onclick="sendMessage()">Send</button>
+
+               </div>
+
+          </div>
+
+     </body>
+     
+     <script>      
+               const sessionId = "{{ session_id }}";
+     </script>
+     
+     <script src="{% static 'js/chat_script.js' %}"></script>
+
+</html>
